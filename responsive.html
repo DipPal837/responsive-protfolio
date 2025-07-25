@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dip Pal | Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: black;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .link {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .link li {
+            margin: 0 10px;
+        }
+
+        .link a {
+            color: #e2e8f0;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .link a:hover {
+            color: orange;
+        }
+
+        section {
+            padding: 100px 20px 60px;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .home-text {
+            margin-top: 60px;
+        }
+
+        .home-text h4 {
+            animation: glow 0.6s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% { color: #00ff00; }
+            100% { color: red; }
+        }
+
+        .highlight {
+            color: orange;
+        }
+
+        .dip {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .home-image img {
+            width: 250px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+
+        .about-container, .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .about-image img {
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        .about-content {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .skills-grid .skill {
+            width: 45%;
+        }
+
+        .skill span {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .progress-bar {
+            background: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 20px;
+        }
+
+        .progress {
+            background: orange;
+            height: 100%;
+            text-align: right;
+            padding-right: 10px;
+            line-height: 20px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .about-table {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .contact-box, .skills, .about-me {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .form1 {
+            width: 90%;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            background: #222;
+            color: white;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: linear-gradient(blue, black);
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .skills-grid .skill {
+                width: 100%;
+            }
+
+            .about-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-content {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .dip {
+                font-size: 1.5rem;
+            }
+
+            .contact-box, .skills, .about-me {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="link">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact-me">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="home-text">
+            <h4>Hello !</h4>
+            <p class="dip">I'm <span class="highlight">Dip Pal</span><br>Full & MERN Stack Developer<br>From India</p>
+        </div>
+        <div class="home-image">
+            <img src="dip2 copy.jpg" alt="Dip Pal">
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="about-me">About Me</h2>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="dippal.jpg" alt="Dip Pal">
+            </div>
+            <div class="about-content">
+                <p>Hi, I'm <strong>Dip Pal</strong>, a passionate web developer. I build responsive, user-friendly websites and apps.</p>
+                <p>Currently pursuing <strong>BCA at Supreme Institute</strong>, I love turning complex problems into elegant solutions.</p>
+                <table class="about-table">
+                    <tr><th>Name:</th><td>Dip Pal</td></tr>
+                    <tr><th>DOB:</th><td>Feb 14, 2006</td></tr>
+                    <tr><th>Address:</th><td>Kushodanga, Kalna, WB</td></tr>
+                    <tr><th>PIN:</th><td>712512</td></tr>
+                    <tr><th>Email:</th><td>dip49438@gmail.com</td></tr>
+                    <tr><th>Phone:</th><td>+91 9339355429</td></tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="skills">My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill"><span>HTML5</span><div class="progress-bar"><div class="progress" style="width: 95%;">95%</div></div></div>
+            <div class="skill"><span>CSS3</span><div class="progress-bar"><div class="progress" style="width: 85%;">85%</div></div></div>
+            <div class="skill"><span>JavaScript</span><div class="progress-bar"><div class="progress" style="width: 82%;">82%</div></div></div>
+            <div class="skill"><span>Python (OOP)</span><div class="progress-bar"><div class="progress" style="width: 90%;">90%</div></div></div>
+            <div class="skill"><span>Java</span><div class="progress-bar"><div class="progress" style="width: 70%;">70%</div></div></div>
+            <div class="skill"><span>MySQL</span><div class="progress-bar"><div class="progress" style="width: 75%;">75%</div></div></div>
+            <div class="skill"><span>PHP</span><div class="progress-bar"><div class="progress" style="width: 70%;">70%</div></div></div>
+            <div class="skill"><span>C Programming</span><div class="progress-bar"><div class="progress" style="width: 75%;">75%</div></div></div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>Portfolio Website</li>
+            <li>Blog App</li>
+        </ul>
+    </section>
+
+    <section id="contact-me">
+        <h2 class="contact-box">Contact Me</h2>
+        <form method="POST" action="/submit">
+            <div class="form1">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="number" name="number" placeholder="Your Number" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Dip Pal. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
